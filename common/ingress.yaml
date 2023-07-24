@@ -1,0 +1,38 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: jasoseoai-ingress
+  annotations:
+    kubernetes.io/ingress.class: alb
+    alb.ingress.kubernetes.io/scheme: internet-facing
+    alb.ingress.kubernetes.io/target-type: ip
+    alb.ingress.kubernetes.io/listen-ports: '[{"HTTP": 80}, {"HTTPS":443}]'
+    alb.ingress.kubernetes.io/certificate-arn: arn:aws:acm:ap-northeast-2:076831690411:certificate/bd15d2f3-8a51-4a8e-b7f9-d9a76f2d1d74
+    alb.ingress.kubernetes.io/ssl-redirect: '443'
+spec:
+  rules:
+  - host: jasoseoai.co.kr
+    http:
+      paths:
+      - backend:
+          service:
+            name: jasoseoai-nextjs-service
+            port:
+              number: 80
+        path: /
+        pathType: Prefix
+  - host: api.jasoseoai.co.kr
+    http:
+      paths:
+      - backend:
+          service:
+            name: jasoseoai-nestjs-service
+            port:
+              number: 80
+        path: /
+        pathType: Prefix
+  defaultBackend:
+    service:
+      name: jasoseoai-nextjs-service
+      port:
+        number: 80
