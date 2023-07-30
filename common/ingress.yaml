@@ -7,8 +7,9 @@ metadata:
     alb.ingress.kubernetes.io/scheme: internet-facing
     alb.ingress.kubernetes.io/target-type: ip
     alb.ingress.kubernetes.io/listen-ports: '[{"HTTP": 80}, {"HTTPS":443}]'
-    alb.ingress.kubernetes.io/certificate-arn: arn:aws:acm:ap-northeast-2:076831690411:certificate/bd15d2f3-8a51-4a8e-b7f9-d9a76f2d1d74
+    alb.ingress.kubernetes.io/certificate-arn: arn:aws:acm:ap-northeast-2:076831690411:certificate/81d26a53-6658-49e5-ab55-d5fc150fbfcd
     alb.ingress.kubernetes.io/ssl-redirect: '443'
+    
 spec:
   rules:
   - host: jasoseoai.co.kr
