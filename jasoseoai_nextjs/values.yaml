@@ -1,6 +1,6 @@
 image:
   repository: 076831690411.dkr.ecr.ap-northeast-2.amazonaws.com/jasoseoai_nextjs
-  tag: 11162f4617af700356bde91afdc48cfccac3a5bb
+  tag: 3b0d2a3cb42cb082f93a387f8bde2f2893c86ddd
   port: 4000
 service:
   name: jasoseoai-nextjs-service
