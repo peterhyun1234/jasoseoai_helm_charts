@@ -1,6 +1,6 @@
 image:
   repository: 076831690411.dkr.ecr.ap-northeast-2.amazonaws.com/jasoseoai_nestjs
-  tag: ec270642e32fb6f3b8f01c3d1b5a38fae36a71ce
+  tag: 816b2422b5d992a0d15206614c7751683a872124
   port: 4050
 service:
   name: jasoseoai-nestjs-service
